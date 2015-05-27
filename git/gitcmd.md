@@ -16,3 +16,4 @@
 | git remote | 查看/添加远程仓库 | git remote < -v > <br />查看远程仓库（详细信息） <br /><br /> git remote add remotename git@github.com:hustnaive/xxx.git <br /> 添加远程仓库remotename <br /><br />git remote rm remotename <br /> 删除远程仓库remotename |
 | git pull | 将远程分支合并到本地 | git pull remotename branchname <br /> 将远程仓库的branchname分支合并到当前分支 |
 | git push | 将本地分支合并到远程仓库 | git push remotename branchname <br /> 将当前分支推送到远程分支 |
+| git reflog | 查看本地的提交日志 | - |
