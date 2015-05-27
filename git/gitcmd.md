@@ -6,7 +6,7 @@
 |git status|查看工作区状态| - |
 |git add|将工作区修改添加到stage|git add < file > |
 |git commit|将stage中的内容提交到版本库 |git commit -m ‘commit log’ < file > <br />提交，或者只提交某文件的修改|
-|git reset|版本恢复 <br /> --mixed 默认方式，保留源码，回退commit和stage/index <br /> --soft 只回退commit，保留stage/index（和mixed的区别联系？）<br /> --hard 彻底回退|git reset < -mixed &aelig; -soft &aelig; -hard > commitlogid <br />恢复到版本库的commitlogid版本 <br /><br /> git reset HEAD filename <br />将stage中未commit的内容放回工作区（unstage）|
+|git reset|版本恢复 <br /> --mixed 默认方式，保留源码，回退commit和stage/index <br /> --soft 只回退commit，保留stage/index（和mixed的区别联系？）<br /> --hard 彻底回退|git reset < -mixed &brvbar; -soft &brvbar; -hard > commitlogid <br />恢复到版本库的commitlogid版本 <br /><br /> git reset HEAD filename <br />将stage中未commit的内容放回工作区（unstage）|
 |git diff|比较工作区代码和stage/版本库代码差异| |
 
 git diff
