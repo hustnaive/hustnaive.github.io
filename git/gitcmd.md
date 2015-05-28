@@ -10,7 +10,7 @@
 | git rm | 将stage中的文件内容移除，并从工作区中删除 | git rm < file > <br />将file移除跟踪并从工作区删除 <br /><br /> git rm --cached < file > 将file从stage移除跟踪，不从工作区真正删除 |
 | git diff | 比较工作区代码和stage/版本库代码差异 | git diff <br /> 比较当前工作区所有文件 <br /><br /> git diff  < file > <br />比较工作区file跟stage的差异 <br /><br /> git diff HEAD < file > <br /> 比较工作区file跟版本库的差异 <br /><br /> git diff --cached &brvbar; --staged <br /> 比较stage中文件与版本库中得代码差异 |
 | git checkout | 检出文件/选择分支|git checkout -- < file > <br /> 从stage检出某文件（用于文件还没有add到stage，从暂存区恢复）<br /><br /> git checkout HEAD < file > <br /> 从版本库检出某文件（当文件已经add到了stage时，从版本库恢复）<br /><br />git checkout -b branchname <br /> 创建并切换到分支，相当于 <br /> git branch branchname; <br /> git checkout branchname; <br /> 两条指令 <br /><br /> git checkout branchname <br /> 选择切换分支 |
-| git log | --stat 显示详细的文件修改记录 | git log < —stat >  < file &brvbar; dir > <br /><br /> git log -p <br /> 显示各个版本文件之间的差异 <br /><br /> git log -p -n <br /> 显示最新的n个commit之间的文件版本差异 |
+| git log | --stat 显示详细的文件修改记录 | git log < —stat >  < file &brvbar; dir > <br /><br /> git log -p <br /> 显示各个版本文件之间的差异 <br /><br /> git log -p -n < file  > <br /> 显示最新的n个commit之间的文件版本差异 <br /><br /> git log -p -n --word-diff < file > <br /> 显示各个版本之间的单词级的差异（默认为行级的） |
 | git reflog | 查看所有分支的提交记录（包括commit和reset）| - |
 | git branch | 创建/查看/删除分支 | git branch <br /> 查看所有分支 <br /><br /> git branch branchname <br /> 创建分支 <br /><br /> git branch -d branchname <br />删除某分支，如果分支没有merge掉，则会报错 <br /><br /> git branch -D branchname<br />强制删除分支 |
 | git merge | 合并分支 | git merge branchname <br /> 使用fast-forward模式从目标分支将内容合并到当前分支，如果发生冲突，需要解决冲突之后commit<br /><br />git merge --no-ff branchname<br />no-fast-forward模式 |
