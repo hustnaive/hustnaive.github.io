@@ -12,8 +12,9 @@
 | git log | --stat 显示详细的文件修改记录 | git log < —stat >  < file &brvbar; dir > <br /> git reflog <br /> 查看所有分支的提交记录（包括commit和reset）| - |
 | git branch | 创建/查看/删除分支 | git branch <br /> 查看所有分支 <br /><br /> git branch branchname <br /> 创建分支 <br /><br /> git branch -d branchname <br />删除某分支，如果分支没有merge掉，则会报错 <br /><br /> git branch -D branchname<br />强制删除分支 |
 | git merge | 合并分支 | git merge branchname <br /> 使用fast-forward模式从目标分支将内容合并到当前分支，如果发生冲突，需要解决冲突之后commit<br /><br />git merge --no-ff branchname<br />no-fast-forward模式 |
-| git stash | 缓存工作区 | git stash<br />将当前工作区入缓存堆栈 <br /><br /> git stash list <br /> 展示工作区缓存堆栈 <br /><br /> git stash apply stash@{n} <br /> 将堆栈中第n个缓存恢复到当前工作区 <br /><br /> git stash pop <br />将最后入栈的工作区缓存恢复到当前现场，同时从堆栈中移除 <br /><br /> git stash drop stash@{n} <br /> 从堆栈中删除某工作区缓存 |
-| git remote | 查看/添加远程仓库 | git remote < -v > <br />查看远程仓库（详细信息） <br /><br /> git remote add remotename git@github.com:hustnaive/xxx.git <br /> 添加远程仓库remotename <br /><br />git remote rm remotename <br /> 删除远程仓库remotename |
+| git stash | 缓存工作区 | git stash <br /> 将当前工作区入缓存堆栈 <br /><br /> git stash list <br /> 展示工作区缓存堆栈 <br /><br /> git stash apply stash@{n} <br /> 将堆栈中第n个缓存恢复到当前工作区 <br /><br /> git stash pop <br />将最后入栈的工作区缓存恢复到当前现场，同时从堆栈中移除 <br /><br /> git stash drop stash@{n} <br /> 从堆栈中删除某工作区缓存 |
+| git remote | 查看/添加远程仓库 | git remote < -v > <br /> 查看远程仓库（详细信息） <br /><br /> git remote add remotename git@github.com:hustnaive/xxx.git <br /> 添加远程仓库remotename <br /><br />git remote rm remotename <br /> 删除远程仓库remotename |
 | git pull | 将远程分支合并到本地 | git pull remotename branchname <br /> 将远程仓库的branchname分支合并到当前分支 |
 | git push | 将本地分支合并到远程仓库 | git push remotename branchname <br /> 将当前分支推送到远程分支 |
 | git reflog | 查看本地的提交日志 | - |
+| git tag | 标签 | git tag <br /> 查看所有标签 <br /><br /> git tag tagname <br /> 打标签 <br /><br /> git tag -d tagname <br /> 删除标签 |
