@@ -2,16 +2,12 @@
 
 |命令|说明|示例|
 |---|----|---|
-
 | git init | 初始化目录为工作区 | - |
-
 | git status | 查看工作区状态 | - |
-
 | git add | 将工作区修改添加到stage | git add < file > |
 | git commit | 将stage中的内容提交到版本库 | git commit -m ‘commit log’ < file > <br />提交，或者只提交某文件的修改 |
 | git reset | 版本恢复 <br /> --mixed 默认方式，保留源码，回退commit和stage/index <br /> --soft 只回退commit，保留stage/index（和mixed的区别联系？）<br /> --hard 彻底回退|git reset < -mixed &brvbar; -soft &brvbar; -hard > commitlogid <br />恢复到版本库的commitlogid版本 <br /><br /> git reset HEAD filename <br />将stage中未commit的内容放回工作区（unstage）|
 | git rm | 将stage中的文件内容移除，并从工作区中删除 | git rm < file > |
-
 | git diff | 比较工作区代码和stage/版本库代码差异 | git diff <br /> 比较当前工作区所有文件 <br /><br /> git diff  < file > <br />比较工作区file跟stage的差异 <br /><br /> git diff HEAD < file > <br /> 比较工作区file跟版本库的差异 <br /><br /> git diff --cached &brvbar; --staged <br /> 比较stage中文件与版本库中得代码差异 |
 | git checkout | 检出文件/选择分支|git checkout -- < file > <br /> 从stage检出某文件（用于文件还没有add到stage，从暂存区恢复）<br /><br /> git checkout HEAD < file > <br /> 从版本库检出某文件（当文件已经add到了stage时，从版本库恢复）<br /><br />git checkout -b branchname <br /> 创建并切换到分支，相当于 <br /> git branch branchname; <br /> git checkout branchname; <br /> 两条指令 <br /><br /> git checkout branchname <br /> 选择切换分支 |
 | git log | --stat 显示详细的文件修改记录 | git log < —stat >  < file &brvbar; dir > <br /> git reflog <br /> 查看所有分支的提交记录（包括commit和reset）| - |
