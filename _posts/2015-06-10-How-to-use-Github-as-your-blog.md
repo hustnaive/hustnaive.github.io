@@ -88,7 +88,7 @@ title: 如何基于GitHub Pages搭建你的博客
 |变量|说明|
 |---|----|
 |layout|使用的layout,使用_layouts目录中的布局文件（不带扩展名）|
-|permalink|默认的日志格式为"/year/month/day/title.html"，如果你不想用这种格式，可以指定你自己的格式}
+|permalink|默认的日志格式为"/year/month/day/title.html"，如果你不想用这种格式，可以指定你自己的格式|
 |published|false or true，是否生成此文章|
 |category/categories|除了把文章按照目录进行归类外，你也可以指定这两个属性。归类列表可以是空格分隔的分类名，也可以是一个[YAML列表](http://en.wikipedia.org/wiki/YAML#Lists)。|
 |tags|文章的标签，同category一样，可以是空格分隔的标签名或者YAML列表|
