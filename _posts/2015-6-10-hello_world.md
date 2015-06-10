@@ -3,11 +3,12 @@ layout: default
 title: 如何基于GitHub Pages和Jekyll搭建博客
 ---
 
-#相关参考
+# 相关参考
+
 * [阮一峰的GitHub Pages和Jekyll入门](http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html)
 * [GitHub Pages Help -- Using Jekyll with Pages](https://help.github.com/articles/using-jekyll-with-pages/)
 
-#我的步骤
+# 我的步骤
 
 ## 前期准备
 如果你希望创建一个用户博客（和项目博客相对），那么，你需要在GitHub上有一个username.github.io的仓库，这个username就是你的GitHub的用户名，请替换成自己的。然后，用Git将用户仓库的master分支clone到本地来。
@@ -22,8 +23,10 @@ title: 如何基于GitHub Pages和Jekyll搭建博客
 
 ## 创建 _layout/ 目录
 
-## 创建 _posts
+## 创建 _posts/ 目录
 
 ## 创建 index.html
 
 ## push到GitHub
+
+# 自定义
