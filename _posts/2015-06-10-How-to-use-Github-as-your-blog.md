@@ -93,7 +93,7 @@ title: 如何基于GitHub Pages搭建你的博客
 |category/categories|除了把文章按照目录进行归类外，你也可以指定这两个属性。归类列表可以是空格分隔的分类名，也可以是一个[YAML列表](http://en.wikipedia.org/wiki/YAML#Lists)。|
 |tags|文章的标签，同category一样，可以是空格分隔的标签名或者YAML列表|
 
->>**其他**：非以上的部分都是用户自定义的的变量，你可以在当前post里面展示。比如前面的title，你可以在布局里面{{page.title}}的形式引用。
+>>**其他**：非以上的部分都是用户自定义的的变量，你可以在当前post里面展示。比如前面的title，你可以在布局里面\{\{page.title}}的形式引用。
 >
 >>**date**：这个属于"out of box"变量，它指示当前文章的编辑时间。
 
@@ -122,7 +122,7 @@ index.html是我们的博客的首页，内容如下：
 	<ul>
 		{% for post in site.posts %}
 			<li>{{post.date}} 
-			<a href="{{post.url}}">{{post.title}}</a></li>
+			<a href="\{{post.url}}">\{{post.title}}</a></li>
 		{% endfor %}
 	</ul>
 >到了这里，你的目录大致的结构应该变成这样了：
