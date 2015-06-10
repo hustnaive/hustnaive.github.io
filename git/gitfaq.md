@@ -8,3 +8,7 @@ git push remotename -f 强制将回退后的本地提交记录push到远程库 <
 git reset file-a 将暂存区未commit的内容恢复到工作区 <br />
 如果这个时候，需要将file-a修改的内容去掉，从上次提交的版本中恢复 <br />
 git checkout file-a
+
+## 3、如何删除GitHub上的一个远程分支？
+git push remotename :remotebranch <br />
+将本地分支空白覆盖远程分支remotebranch，即为删除远程分支

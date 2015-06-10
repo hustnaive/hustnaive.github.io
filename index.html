@@ -1,10 +1,8 @@
 ---
 layout: default
-title: my blog
+title: {{site.blogname}}
 ---
-
-<h2>{{page.title}}</h2>
-<p>The newest posts</p>
+<h2>{{site.blogdesc}}</h2>
 <ul>
 	{% for post in site.posts %}
 		<li>{{post.date | date_to_string }} 

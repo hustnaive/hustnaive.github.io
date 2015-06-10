@@ -21,6 +21,11 @@ title: 如何基于GitHub Pages和Jekyll搭建博客
 
 ## 创建 _config.yml 配置文件
 
+config配置文件里面可以有很多参数，这里我创建的用户博客默认为空。
+
+如果你创建的是项目博客的话，建议这里增加一个baseurl配置，设置为项目路径/prjpath
+
+
 ## 创建 _layout/ 目录
 
 ## 创建 _posts/ 目录
