@@ -47,10 +47,10 @@ categories: Github
 	<html>
 	<head>
 		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-		<title>{{page.title}}</title>
+		<title>{ {page.title}}</title>
 	</head>
 	<body>
-		{{content}}
+		{ {content}}
 	</body>
 	</html>
 
@@ -82,9 +82,10 @@ categories: Github
 
 `---`之间的内容叫**Front Matter**，这里用来设置一些元数据。里面的内容会被Jkeyll引擎解析执行。
 
-这里`layout`代表本页面使用的布局文件，default代表使用前面的default.html作为布局文件。你也可以使用其他的布局文件，只需要按照前面的方式新建你的布局文件放在_layouts里面就可以了。`title`代表文章标题和模板default.html里面的page.title对应
+这里`layout`代表本页面使用的布局文件，default代表使用前面的default.html作为布局文件。你也可以使用其他的布局文件，只需要按照前面的方式新建你的布局文件放在_layouts里面就可以了。`title`代表文章标题和模板default.html里面的page.title对应。
 
->Front Matter列表
+### Front Matter列表
+
 |变量|说明|
 |---|----|
 |layout|使用的layout,使用_layouts目录中的布局文件（不带扩展名）|
@@ -119,10 +120,10 @@ index.html是我们的博客的首页，内容如下：
 	title: The World Is Flat 
 	---
 	<ul>
-		{% for post in site.posts %}
-			<li>{{post.date}} 
-			<a href="{{post.url}}">{{post.title}}</a></li>
-		{% endfor %}
+		{ % for post in site.posts %}
+			<li>{ {post.date}} 
+			<a href="{ {post.url}}">{ {post.title}}</a></li>
+		{ % endfor %}
 	</ul>
 >到了这里，你的目录大致的结构应该变成这样了：
 >
