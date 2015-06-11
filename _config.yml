@@ -1,0 +1,9 @@
+title: 视界
+email: hustnaive@me.com
+description: 方亮的博客 PHPer
+github_username:  hustnaive
+permalink: /:year/:month/:day/:title/
+
+# Build settings
+markdown: kramdown
+

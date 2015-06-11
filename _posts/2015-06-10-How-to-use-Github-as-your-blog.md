@@ -46,14 +46,14 @@ title: 如何基于GitHub Pages搭建你的博客
 	<html>
 	<head>
 		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-		<title>\{\{page.title}}</title>
+		<title>{{page.title}}</title>
 	</head>
 	<body>
-		\{\{content}}
+		{{content}}
 	</body>
 	</html>
 
-里面的`\{\{page.title}}`的内容是Jekyll的模板语法，代表文章标题。Jekyll使用[Liquid模板语言](https://github.com/shopify/liquid/wiki/liquid-for-designers)，更多可以使用的变量，参考[Jekyll变量参考](http://jekyllrb.com/docs/variables/)。
+里面的`{{page.title}}`的内容是Jekyll的模板语法，代表文章标题。Jekyll使用[Liquid模板语言](https://github.com/shopify/liquid/wiki/liquid-for-designers)，更多可以使用的变量，参考[Jekyll变量参考](http://jekyllrb.com/docs/variables/)。
 
 >现在你的hustnaive目录大致的结构如下：
 >
@@ -84,7 +84,6 @@ title: 如何基于GitHub Pages搭建你的博客
 这里`layout`代表本页面使用的布局文件，default代表使用前面的default.html作为布局文件。你也可以使用其他的布局文件，只需要按照前面的方式新建你的布局文件放在_layouts里面就可以了。`title`代表文章标题和模板default.html里面的page.title对应
 
 >Front Matter列表
->
 |变量|说明|
 |---|----|
 |layout|使用的layout,使用_layouts目录中的布局文件（不带扩展名）|
@@ -93,11 +92,10 @@ title: 如何基于GitHub Pages搭建你的博客
 |category/categories|除了把文章按照目录进行归类外，你也可以指定这两个属性。归类列表可以是空格分隔的分类名，也可以是一个[YAML列表](http://en.wikipedia.org/wiki/YAML#Lists)。|
 |tags|文章的标签，同category一样，可以是空格分隔的标签名或者YAML列表|
 
->>**其他**：非以上的部分都是用户自定义的的变量，你可以在当前post里面展示。比如前面的title，你可以在布局里面\{\{page.title}}的形式引用。
->
->>**date**：这个属于"out of box"变量，它指示当前文章的编辑时间。
+**其他**：非以上的部分都是用户自定义的的变量，你可以在当前post里面展示。比如前面的title，你可以在布局里面\{\{page.title}}的形式引用。
 
-<br />
+**date**：这个属于"out of box"变量，它指示当前文章的编辑时间。
+
 >到了这里，你的目录大致的结构应该变成这样了：
 >
 	/hustnaive
@@ -122,7 +120,7 @@ index.html是我们的博客的首页，内容如下：
 	<ul>
 		{% for post in site.posts %}
 			<li>{{post.date}} 
-			<a href="\{\{post.url}}">\{\{post.title}}</a></li>
+			<a href="{{post.url}}">{{post.title}}</a></li>
 		{% endfor %}
 	</ul>
 >到了这里，你的目录大致的结构应该变成这样了：
