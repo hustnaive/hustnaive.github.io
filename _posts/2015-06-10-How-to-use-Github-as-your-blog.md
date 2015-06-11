@@ -5,14 +5,14 @@ categories: 指南
 tags: github
 ---
 
-# 参考阅读
+# 1、参考阅读
 
 * [阮一峰的GitHub Pages和Jekyll入门](http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html)
 * [GitHub Pages Help -- Using Jekyll with Pages](https://help.github.com/articles/using-jekyll-with-pages/)
 
-# 基本步骤
+# 2、基本步骤
 
-## 前期准备
+## 2.1、前期准备
 
 如果你希望创建一个用户博客（和项目博客相对），那么，你需要在GitHub上有一个username.github.io的仓库，这个username就是你的GitHub的用户名，请替换成自己的。然后，将用户仓库的master分支clone到本地来。
 
@@ -28,15 +28,15 @@ tags: github
 * 我把仓库clone在本地的hustnaive目录下面
 * 我的博客的预览地址为：http://hustnaive.github.io
 
-## 创建 _config.yml 配置文件
+## 2.2、创建 _config.yml 配置文件
 
 >shell>>$ touch _config.yml
 
-`_config.yml`是Jekyll的配置文件，里面可以有很多参数，初期，我们可以保持为空就可以了。以后可以根据自己的需要来更新这个文件。
+`_config.yml`是Jekyll的配置文件，里面可以有很多参数，针对用户博客，我们可以保持为空就可以了。以后可以根据自己的需要来更新这个文件。但是，如果你新建的是一个项目的博客，那么需要设置baseurl为项目仓库名。
 
 关于`_config.yml`具体有哪些配置参数以及用法详见Jekyll的文档[Jekyll配置](http://jekyllrb.com/docs/quickstart/)。
 
-## 创建 _layout/ 目录
+## 2.3、创建 _layout/ 目录
 
 >shell>>$ mkdir _layout
 
@@ -66,7 +66,7 @@ tags: github
 
 * 需要注意的是，模板里面的变量`\{\{`之间，我为了能够在文章中显示出来，增加了一个空格，变成了`{ {`，你在自己的代码中需要手动删除空格，后面同理。
 
-## 创建 _posts/ 目录，写你的第一篇文章
+## 2.4、创建 _posts/ 目录，写你的第一篇文章
 
 >shell>>$ mkdir _posts
 
@@ -124,7 +124,7 @@ tags: github
 		|-- _posts/
 		|		|-- 2016-06-10-Hello-World.md
 
-## 创建 index.html
+## 2.5、创建 index.html
 
 >shell>>$ touch index.html
 
@@ -156,7 +156,7 @@ index.html是我们的博客的首页，内容如下：
 
 截止目前，我们的博客的雏形已经搭好了。接下来，我们可以把代码push到github中预览了。
 
-## push到GitHub
+## 2.6、push到GitHub
 
 >shell>>$ pwd <br />
 >/path/to/hustnaive <br />
@@ -164,11 +164,11 @@ index.html是我们的博客的首页，内容如下：
 >shell>>$ git commit -m 'init blog' <br />
 >shell>>$ git push origin master
 
-# 美化博客
+# 3、美化你的博客
 
 到这里，你的博客应该已经差不多了。但是，这时候我们的博客还很丑，怎么美化呢？
 
-这里有一些Jekyll的主题模板，你只需要将源代码下载下来，覆盖你的本地目录，根据模板的要求修改一些配置即可。
+这里有一些Jekyll的主题模板，你只需要将源代码下载下来，根据前面的指引覆盖你的本地目录，然后根据模板的要求修改一些配置即可。
 
 * http://jekyllthemes.org/
 * http://www.zhihu.com/question/20223939
