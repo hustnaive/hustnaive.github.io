@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: page
 title: 如何基于GitHub Pages搭建你的博客
+categories: Github
 ---
 
 # 相关参考
