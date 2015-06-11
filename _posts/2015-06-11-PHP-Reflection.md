@@ -6,7 +6,7 @@ tags: php
 ---
 # 参考文档
 
-* PHP反射API官方文档:<http://php.net/manual/zh/class.reflection.php>
+* PHP反射API官方文档：<http://php.net/manual/zh/class.reflection.php>
 
 # PHP版本要求
 

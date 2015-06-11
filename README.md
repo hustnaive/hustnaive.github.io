@@ -6,3 +6,7 @@
 
 # 子目录 /git
 我学习研究git的一些零碎收集地
+
+---
+
+技术博客地址：<http://hustnaive.github.io>
