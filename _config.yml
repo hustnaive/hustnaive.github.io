@@ -3,7 +3,4 @@ email: hustnaive@me.com
 description: ·½ÁÁµÄ²©¿Í PHPer
 github_username:  hustnaive
 permalink: /:year/:month/:day/:title/
-
-# Build settings
 markdown: kramdown
-

@@ -144,3 +144,6 @@ index.html是我们的博客的首页，内容如下：
 >shell>>$ git push origin master
 
 # 美化模板
+
+* http://jekyllthemes.org/
+* http://www.zhihu.com/question/20223939
