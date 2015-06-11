@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 如何基于GitHub Pages搭建你的博客
-categories: 指南
+categories: howtos
 tags: github
 ---
 

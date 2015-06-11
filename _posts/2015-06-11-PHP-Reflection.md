@@ -1,3 +1,9 @@
+---
+layout: page
+title: 如何基于GitHub Pages搭建你的博客
+categories: php
+tags: php
+---
 # 参考文档
 
 * PHP反射API官方文档:<http://php.net/manual/zh/class.reflection.php>
