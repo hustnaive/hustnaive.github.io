@@ -46,14 +46,14 @@ title: 如何基于GitHub Pages搭建你的博客
 	<html>
 	<head>
 		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-		<title>{{page.title}}</title>
+		<title>\{\{page.title}}</title>
 	</head>
 	<body>
-		{{content}}
+		\{\{content}}
 	</body>
 	</html>
 
-里面的`{{page.title}}`的内容是Jekyll的模板语法，代表文章标题。Jekyll使用[Liquid模板语言](https://github.com/shopify/liquid/wiki/liquid-for-designers)，更多可以使用的变量，参考[Jekyll变量参考](http://jekyllrb.com/docs/variables/)。
+里面的`\{\{page.title}}`的内容是Jekyll的模板语法，代表文章标题。Jekyll使用[Liquid模板语言](https://github.com/shopify/liquid/wiki/liquid-for-designers)，更多可以使用的变量，参考[Jekyll变量参考](http://jekyllrb.com/docs/variables/)。
 
 >现在你的hustnaive目录大致的结构如下：
 >
@@ -122,7 +122,7 @@ index.html是我们的博客的首页，内容如下：
 	<ul>
 		{% for post in site.posts %}
 			<li>{{post.date}} 
-			<a href="\{{post.url}}">\{{post.title}}</a></li>
+			<a href="\{\{post.url}}">\{\{post.title}}</a></li>
 		{% endfor %}
 	</ul>
 >到了这里，你的目录大致的结构应该变成这样了：
