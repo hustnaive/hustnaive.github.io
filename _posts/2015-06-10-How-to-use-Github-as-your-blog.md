@@ -64,7 +64,7 @@ tags: github
 		|-- _layout/
 		|		|-- default.html
 
-* 需要注意的是，模板里面的变量`\{\{`之间，我为了能够在文章中显示出来，增加了一个空格，变成了`{ {`，你在自己的代码中需要手动删除空格，后面同理。
+* 需要注意的是，模板里面的变量`\{{`之间，我为了能够在文章中显示出来，增加了一个空格，变成了`{ {`，你在自己的代码中需要手动删除空格，后面同理。
 
 ## 创建 _posts/ 目录，写你的第一篇文章
 
@@ -88,9 +88,10 @@ tags: github
 这里`layout`代表本页面使用的布局文件，default代表使用前面的default.html作为布局文件。你也可以使用其他的布局文件，只需要按照前面的方式新建你的布局文件放在_layouts里面就可以了。`title`代表文章标题和模板default.html里面的page.title对应。
 
 ### Front Matter列表
+
 <table>
 	<thead>
-		<th>变量</th><th>说明</th>
+		<th align="center">变量</th><th align="center">说明</th>
 	</thead>
 	<tbody>
 		<tr>
@@ -111,10 +112,9 @@ tags: github
 	</tbody>
 </table>
 
-> **其他**：非以上的部分都是用户自定义的的变量，你可以在当前post里面展示。比如前面的title，你可以在布局里面\{\{page.title}}的形式引用。 <br />
-> **date**：这个属于"out of box"变量，它指示当前文章的编辑时间。
+* **其他**：非以上的部分都是用户自定义的的变量，你可以在当前post里面展示。比如前面的title，你可以在布局里面\{\{page.title}}的形式引用。 <br />
+* **date**：这个属于"out of box"变量，它指示当前文章的编辑时间。
 
-<br />
 >到了这里，你的目录大致的结构应该变成这样了：
 >
 	/hustnaive
@@ -142,6 +142,7 @@ index.html是我们的博客的首页，内容如下：
 			<a href="{ {post.url}}">{ {post.title}}</a></li>
 		{ % endfor %}
 	</ul>
+
 >到了这里，你的目录大致的结构应该变成这样了：
 >
 	/hustnaive
@@ -152,7 +153,8 @@ index.html是我们的博客的首页，内容如下：
 		|		|-- 2016-06-10-Hello-World.md
 		|-- index.html
 
-截止到这里，我们的博客的雏形已经搭好了。接下来，我们可以把代码push到github中了。
+
+截止目前，我们的博客的雏形已经搭好了。接下来，我们可以把代码push到github中预览了。
 
 ## push到GitHub
 
@@ -162,8 +164,11 @@ index.html是我们的博客的首页，内容如下：
 >shell>>$ git commit -m 'init blog' <br />
 >shell>>$ git push origin master
 
-# 美化模板
+# 美化博客
 
-到这里，你的博客应该已经差不多了，后面，你只需要
+到这里，你的博客应该已经差不多了。但是，这时候我们的博客还很丑，怎么美化呢？
+
+这里有一些Jekyll的主题模板，你只需要将源代码下载下来，覆盖你的本地目录，根据模板的要求修改一些配置即可。
+
 * http://jekyllthemes.org/
 * http://www.zhihu.com/question/20223939
