@@ -13,6 +13,7 @@ tags: php
 PHP5以上
 
 # 一、反射获取PHP扩展相关信息
+
 ## 1.1、核心API：[ReflectionExtension](http://php.net/manual/zh/class.reflectionextension.php)、[ReflectionZendExtension](http://php.net/manual/zh/class.reflectionzendextension.php)
 
 ### [ReflectionExtension](http://php.net/manual/zh/class.reflectionextension.php)：报告一个扩展（extension）的有关信息
