@@ -168,7 +168,9 @@ index.html是我们的博客的首页，内容如下：
 
 到这里，你的博客应该已经差不多了。但是，这时候我们的博客还很丑，怎么美化呢？
 
-这里有一些Jekyll的主题模板，你只需要将源代码下载下来，根据前面的指引覆盖你的本地目录，然后根据模板的要求修改一些配置即可。我的主题修改自：https://github.com/Gaohaoyang/gaohaoyang.github.io
+这里有一些Jekyll的主题模板，你只需要将源代码下载下来，根据前面的指引覆盖你的本地目录，然后根据模板的要求修改一些配置即可。
 
-* http://jekyllthemes.org/
-* http://www.zhihu.com/question/20223939
+* jekyll开源模板：<http://jekyllthemes.org/>
+* 有推荐的简洁明快的jekyll模板吗？<http://www.zhihu.com/question/20223939>
+
+我的主题修改自：<https://github.com/Gaohaoyang/gaohaoyang.github.io>
