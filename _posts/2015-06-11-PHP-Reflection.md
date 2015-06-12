@@ -1,6 +1,6 @@
 ---
 layout: page
-title: PHP反射机制详解
+title: PHP反射机制整理
 categories: php
 tags: php
 ---
