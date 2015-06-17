@@ -63,3 +63,6 @@ tags: php composer
 
 如果已有的Yii2项目，你可以按照以上方式将把composer纳入包管理中来。
 
+
+---
+Composer中文镜像：<http://pkg.phpcomposer.com/>
