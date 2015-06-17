@@ -2,7 +2,7 @@
 layout: page
 title: Composer包管理器介绍
 categories: php
-tags: php
+tags: php composer
 ---
 
 # 参考文档
@@ -37,7 +37,7 @@ tags: php
 >打开shell，在一个可以通过本地服务器访问的路径下面执行指令：
 
 	composer global require "fxp/composer-asset-plugin:~1.0.0"
-    composer create-project --prefer-dist yiisoft/yii2-app-basic basic
+    composer create-project --prefer-dist --stability=dev yiisoft/yii2-app-basic basic
 
 在执行的过程中，你可能还需要提供一下git的accesstoken。
 
