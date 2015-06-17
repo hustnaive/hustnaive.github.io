@@ -21,9 +21,15 @@ published:false
 
 ## 依赖包仓库
 
-### 仓库地址
+既然存在包管理器，那么，到哪里去找我需要的依赖包呢？composer的官方仓库地址：<https://packagist.org/>
 
-### 提交自己的扩展
+## 提交自己的扩展
+
+提交自己的扩展非常简单：
+
+* 在仓库注册一个账号：<https://packagist.org/>
+* 登录后，点击submit
+* 在表单中输入你的git或者svn地址即可
 
 ## Composer与Yii2协同
 
@@ -44,13 +50,17 @@ published:false
 * 权限按照默认勾选，注意`repo`必须有。
 * 确定后，把生成的hash token复制下来，注意这个token只会显示一次。
 
-然后，回到创建项目的终端，将上面的token复制过去。
+然后，回到创建项目的终端，将上面的token复制过去。（注意这个token在赋值的时候不会显示出来，需要回车后才知道是否粘贴成功）
 
 等待加载完成，你就在工作路径的basic目录下面成功新建了一个yii的脚手架。更详细的参考[安装Yii](https://github.com/hustnaive/yii2/blob/master/docs/guide-zh-CN/start-installation.md)
 
 有人会想，我不想利用脚手架，想要自己根据自己的需求自定义目录，这个时候怎么办？
 
-### 通过Composer自定义安装Yii2
+### 通过Composer来管理已有Yii2项目
 
+* `composer init`：在当前目录创建一个composer.json，并采用交互方式来初始化配置文件。
+* `composer install`：在vendor目录安装默认的依赖包并生成`autoload.php`文件。
+* `composer require 'packagename *'`：在当前目前自动查找指定的第三方包，并安装。
 
-### 给Yii2安装第三方扩展
+如果已有的Yii2项目，你可以按照以上方式将把composer纳入包管理中来。
+
