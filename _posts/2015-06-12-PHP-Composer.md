@@ -9,6 +9,7 @@ tags: php composer
 
 * [Composer官方网站](http://www.phpcomposer.com/)
 * [依赖包仓库](https://packagist.org/)
+* [成武的Composer Doc项目](https://github.com/5-say/composer-doc-cn)
 
 ## Composer的安装
 
