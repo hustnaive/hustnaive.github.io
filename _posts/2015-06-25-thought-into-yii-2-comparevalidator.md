@@ -15,7 +15,7 @@ Yii 2 CompareValidator的一点思考
 
 看了下`CompareValidator`的实现，发现针对字符串的比较处理上，确实有待商榷的地方。
 
- 	/**
+	/**
      * Compares two values with the specified operator.
      * @param string $operator the comparison operator
      * @param string $type the type of the values being compared
