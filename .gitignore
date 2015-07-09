@@ -1,3 +1,4 @@
 #ignore some local files
 *.local
+.DS_Store
 
