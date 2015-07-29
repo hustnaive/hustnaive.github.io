@@ -1,0 +1,32 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>LeanCloudTest</title>
+	<script src="https://cdn1.lncld.net/static/js/av-mini-0.5.6.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		AV.initialize("wzrafbmrjijdn8040k2puv3ai93vmwl58g0tilcx4ok0vn4u", "scbdehrp7w6er6riqpc3c1o5rn6s5l1jaae2k404bvs1j7g3");
+
+		function commentAt(url, content, author, success, error) {
+			var Comments = AV.Object.extend('Comments');
+			var comment = new Comments();
+			comment.set('url', url);
+			comment.set('author', author);
+			comment.set('content', content);
+			comment.save(null,{
+				success: success || function(obj) {
+					console.log(obj);
+				},
+				error: error||function(comment,error) {
+					console.log(comment);
+					console.log(error);
+				}
+			})
+		}
+
+		commentAt(window.location.href,Math.random()+'','nf',function(comment){alert(comment.attributes.content);});
+		
+	</script>
+</body>
+</html>
