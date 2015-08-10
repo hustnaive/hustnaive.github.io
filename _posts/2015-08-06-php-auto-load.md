@@ -139,6 +139,9 @@ include函数会把`path/to/clsa.php`的代码加载进来，并在当前位置�
 	        require APP_ROOT.DIRECTORY_SEPARATOR.implode(DIRECTORY_SEPARATOR,$clspath).'.php';
 	    }
 	}
+	
+	//注册自动加载
+	spl_autoload_register(__NAMESPACE__.'\Autoloader::autoload');
 
 PSR0-PSR4规范扩展阅读：
 
