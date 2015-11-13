@@ -7,7 +7,7 @@ tags: git,scrum
 
 # 基于GIT的敏捷开发发布流程
 
-![流程图](img/git-dev-process.jpg)
+![流程图](/img/git-dev-process.jpg)
 
 ## 上冲刺发布后，下冲刺开始前
 
@@ -18,7 +18,7 @@ tags: git,scrum
 
 GitLab提供`protected branches`功能，允许锁定某分支，这样，非masters组的人不能提交代码到此分支（这要求不能所有的的开发小组成员都有masters组权限，不然锁定就失去意义了）
 
-![锁定MASTER分支](img/protected-branch.png)
+![锁定MASTER分支](/img/protected-branch.png)
 
 ### 开启功能分支
 
