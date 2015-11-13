@@ -1,8 +1,8 @@
 ---
 layout: page
 title: 基于GIT的敏捷开发发布流程
-categories: git,scrum
-tags: git,scrum
+categories: scrum
+tags: git scrum
 ---
 
 # 基于GIT的敏捷开发发布流程
