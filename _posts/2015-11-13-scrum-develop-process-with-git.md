@@ -26,15 +26,12 @@ Git For Windows：<https://git-for-windows.github.io/>
 
 建议以Git Bash方式运行，这样更加了解每个动作后面做的事情，GUI各家背后做的事情完全对用户屏蔽，对程序员而言非常不友好。
 
-```
-git bash:
-
-cd /path/to/proj
-git fetch origin
-git checkout -b feature1 origin/master
-git branch -a
-
-```
+	git bash:
+	
+	cd /path/to/proj
+	git fetch origin
+	git checkout -b feature1 origin/master
+	git branch -a
 
 1. 进入源代码目录
 2. 将远程代码拉取到本地
@@ -45,14 +42,12 @@ git branch -a
 
 有时候，我们需要异地，或者协同开发，这个时候，可能需要把远程分支push到仓库，然后，从另外一个地方checkout功能分支代码
 
-```
-git bash:
+	git bash:
+	
+	cd /path/to/proj
+	git checkout feature1
+	git push origin feature1
 
-cd /path/to/proj
-git checkout feature1
-git push origin feature1
-
-```
 
 1. 进入源代码目录
 2. 切换到功能分支
@@ -61,14 +56,13 @@ git push origin feature1
 这样，在另外一个地方，我们可以如下获取功能分支代码
 
 
-```
-git bash:
 
-cd /path/to/proj
-git fetch origin
-git checkout -b feature1 origin/feature1
+	git bash:
+	
+	cd /path/to/proj
+	git fetch origin
+	git checkout -b feature1 origin/feature1
 
-```
 
 1. 进入源码目录
 2. 拉取远程仓库的最新代码
@@ -77,10 +71,10 @@ git checkout -b feature1 origin/feature1
 上述命令的作用是拉取远程仓库的最新代码，建立本地分支feature1和远程分支origin/feature1的跟踪关系。
 首次拉取需要fetch和从远程分支建立本地分支，以后只需要pull远程分支到本地即可：
 
-```
-git checkout feature1
-git pull origin feature1
-```
+
+	git checkout feature1
+	git pull origin feature1
+
 
 1. 切换到featrue1分支
 2. 从远程分支拉取最新代码并合并到本地分支
@@ -97,11 +91,11 @@ git pull origin feature1
 
 功能分支开发完成后，我们需要将其合并到CI分支并提测，整个操作如下：
 
-```
-git checkout -b ci origin/ci 或 git checkout ci & git pull origin ci
-git merge feature1
-git push origin ci
-```
+
+	git checkout -b ci origin/ci 或 git checkout ci & git pull origin ci
+	git merge feature1
+	git push origin ci
+
 
 1. 建立本地CI分支到远程CI分支的跟踪。如果已经建立，切换到CI分支，执行拉取最新的代码合并到本地
 2. 将feature1分支合并到CI分支，合并的过程中可能产生冲突，根据具体情况进行冲突解决
@@ -111,12 +105,12 @@ git push origin ci
 
 从MASTER重新建立CI-NEW分支，对每个本冲刺可以发布的功能，在CI-NEW上执行合并操作。将CI-NEW提测，并验证可发布的功能是否有问题。
 
-```
-git checkout -b ci-new origin/master
-git fetch origin/feature1..n
-git merge feature1..n
-git push origin ci -f
-```
+
+	git checkout -b ci-new origin/master
+	git fetch origin/feature1..n
+	git merge feature1..n
+	git push origin ci -f
+
 
 这里，为了保持CI的一致性，用ci-new覆盖ci（加了 -f 参数）。
 
@@ -124,11 +118,11 @@ git push origin ci -f
 
 MASTER分支处于锁定状态，理论上本冲刺迭代期不会对其产生更改，但是不排除有线上紧急bug，需要紧急修复的场景，这种情况下，需要从MASTER分支开BUG分支，解决bug，并合并回MASTER分支。
 
-```
-git checkout -b bug-fix origin/master
-//fix bug
-git push origin bug-fix
-```
+
+	git checkout -b bug-fix origin/master
+	//fix bug
+	git push origin bug-fix
+
 
 1. 从master分支建立bug-fix分支
 2. 解决bug
@@ -136,15 +130,15 @@ git push origin bug-fix
 
 然后，由具有master权限的人执行合并回主干的操作:
 
-```
-git fetch origin bug-fix
-git checkout master
-git merge bug-fix
-git push origin master
-git checkout ci
-git merge bug-fix
-git push origin ci
-```
+
+	git fetch origin bug-fix
+	git checkout master
+	git merge bug-fix
+	git push origin master
+	git checkout ci
+	git merge bug-fix
+	git push origin ci
+
 
 1. 拉取bug-fix分支到本地
 2. 切换到master分支
@@ -168,12 +162,12 @@ git push origin ci
 
 ### 上预发
 
-```
-git checkout master
-git pull origin master
-git merge origin ci
-git push origin master
-```
+
+	git checkout master
+	git pull origin master
+	git merge origin ci
+	git push origin master
+
 
 1. 切换到master分支
 2. 将远程master分支拉取最新的到本地master
@@ -196,11 +190,11 @@ git push origin master
 
 预发验证通过，即可打标签，上生产
 
-```
-git checkout master
-git tag release-tag
-git push origin release-tag
-```
+
+	git checkout master
+	git tag release-tag
+	git push origin release-tag
+
 
 1. 切换到master分支
 2. 打发布标签，比如v20151113-release
@@ -214,11 +208,11 @@ git push origin release-tag
 
 A. 清理本地分支
 
-```
-git checkout master
-git branch -a
-git branch -d/-D feature1 bug-fix 
-```
+
+	git checkout master
+	git branch -a
+	git branch -d/-D feature1 bug-fix 
+
 
 1. 切换回master分支
 2. 查看所有本地分支
@@ -228,9 +222,9 @@ B. 清理远程仓库分支
 
 删除了本地的分支，我们也需要对应的删除本迭代中因为协作需要推送到远程仓库的分支
 
-```
-git push origin :feature1
-```
+
+	git push origin :feature1
+
 
 1. 相当于将一个空的分支推送到远程，即删除远程分支
 
