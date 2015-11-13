@@ -1,3 +1,10 @@
+---
+layout: page
+title: 基于GIT的敏捷开发发布流程
+categories: git,scrum
+tags: git,scrum
+---
+
 # 基于GIT的敏捷开发发布流程
 
 ![流程图](img/git-dev-process.jpg)
