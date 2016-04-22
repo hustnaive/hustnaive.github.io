@@ -12,7 +12,6 @@ tags: php
 ```php
 
 $a = ['a'=>1,'b'=>['c'=>2],'d'=>3,'e'=>4];
-$b = $a;
 
 foreach($a as $k=>&$v) {
 
